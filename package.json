@@ -1,0 +1,46 @@
+{
+  "name": "tythursby",
+  "version": "1.0.0",
+  "description": "developer portfolio Tyler S Thursby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tythursby/tythursby.github.io.git"
+  },
+  "keywords": [
+    "Tyler",
+    "Thursby",
+    "Front",
+    "End",
+    "Developer",
+    "Designer"
+  ],
+  "author": "TyT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tythursby/tythursby.github.io/issues"
+  },
+  "homepage": "https://github.com/tythursby/tythursby.github.io#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.13",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-inject": "^4.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.2.1",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "file-loader": "^1.1.5",
+    "url-loader": "^0.6.2"
+  }
+}
