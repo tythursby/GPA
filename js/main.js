@@ -18,7 +18,7 @@ $('#face_wrapper').click(function (){
 $(document).ready(function(){
     $('#characterLeft').text('140 characters left');
     $('#message').keydown(function () {
-        var max = 140;
+        var max = 300;
         var len = $(this).val().length;
         if (len >= max) {
             $('#characterLeft').text('You have reached the limit');
