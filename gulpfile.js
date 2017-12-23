@@ -47,6 +47,7 @@ gulp.task('serve', ['sass', 'inject'], function() {
 
     gulp.watch('app/scss/*.scss', ['sass']).on('change', browserSync.reload);
     gulp.watch('app/*.html').on('change', browserSync.reload);
+    gulp.watch('app/views/*.html').on('change', browserSync.reload);
     gulp.watch('app/*.js').on('change', browserSync.reload);
 });
 
