@@ -6642,20 +6642,152 @@ fieldset[disabled] .btn-danger.active {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
+.bt {
+  border-top: 2px solid #e0e0e0; }
+
+.bb {
+  border-bottom: 2px solid #e0e0e0; }
+
+.br {
+  border-right: 2px solid #e0e0e0; }
+
+.bl {
+  border-left: 2px solid #e0e0e0; }
+
+#bio.row {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+#serv.row {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+#serv.row .col-xs-8 {
+  padding-right: 25px; }
+
+#serv.row .col-xs-8 p {
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
+
+#serv.row .col-xs-4 {
+  padding-left: 25px; }
+
+#serv.row .bg {
+  border-radius: 2px; }
+
+#serv.row .bg img {
+  border-radius: 2px;
+  max-width: 100%; }
+
+#serv.row .bg span img {
+  margin-bottom: 10px; }
+
+#serv.row .bg img.fs {
+  width: 100%;
+  height: 225px; }
+
+#serv.row .bg img.ft {
+  max-width: 100%;
+  height: 158.5px; }
+
 #about {
   margin-left: 10%;
-  width: 80%; }
-
-#about .main {
+  width: 80%;
   margin-top: 50px;
   margin-bottom: 50px; }
 
-#about .main h2 {
+#about .links {
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  padding: 10px; }
+
+#about li {
+  line-height: 2em; }
+
+#about h2.prod {
+  margin-top: 50px; }
+
+#about h2 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   color: white;
   margin: 0px;
+  margin-bottom: 50px;
   background-color: #375a9d;
   padding: 10px;
   display: inline-block; }
+
+#about #medical ul {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px; }
+
+#about #medical h4 {
+  margin-bottom: 0; }
+
+#about #medical h5.under_pics {
+  margin-top: 50px; }
+
+#about #medical div.col-lg-6.col-md-6.col-xs-12 {
+  padding: 40px;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0; }
+
+#about #medical .cond_img div.col-lg-3.col-md-6.col-xs-12 {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#about #medical .cond_img img {
+  width: 250px;
+  height: 200px;
+  max-width: 100%;
+  border-radius: 2px; }
+
+#about h4 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding: 10px;
+  background-color: #e0e0e0; }
+
+#about h4.confident {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  margin-top: 20px; }
+
+#about h5 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-size: 1.1em;
+  color: white;
+  background-color: #375a9d;
+  padding: 10px;
+  display: inline-block; }
+
+#about p {
+  margin-bottom: 20px; }
+
+#about div.col-xs-6 {
+  height: 300px;
+  padding: 40px;
+  border-right: 2px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0; }
+
+#about div.col-xs-6 img {
+  height: 130px;
+  border-radius: 5px;
+  max-height: 100%;
+  max-width: 75%;
+  margin-bottom: 50px; }
+
+#about div.col-xs-6 a {
+  width: 100%;
+  padding: 20px; }
+
+#about div.col-xs-6.i {
+  border-right: none; }
 
 #top div.col-xs-12 {
   padding: 0; }
@@ -6688,6 +6820,12 @@ body {
 .bold {
   font-weight: bold; }
 
+footer .footWrap {
+  background-color: #6a7a82;
+  width: 100%;
+  height: 297px;
+  color: white; }
+
 footer img {
   max-width: 250px; }
 
@@ -6700,7 +6838,8 @@ footer .footbar {
   border-top: 1px solid white;
   margin-left: 10%;
   width: 80%;
-  padding: 20px; }
+  padding: 20px;
+  background-color: #6a7a82; }
 
 footer .footTop {
   margin-left: 10%;
@@ -6709,19 +6848,14 @@ footer .footTop {
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  background-color: #6a7a82; }
 
 footer .footTop div {
   padding: 0; }
 
 footer div a {
   color: white; }
-
-footer .date {
-  color: white;
-  background-color: #6a7a82;
-  height: 290px;
-  width: 100%; }
 
 .fixed_top {
   position: fixed;
@@ -6768,7 +6902,7 @@ footer .date {
 .info div.col-lg-3.col-md-3.col-sm-6.col-xs-12 img {
   border-radius: 5px;
   border: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   max-width: 100%; }
 
 .info div.col-lg-3.col-md-3.col-sm-6.col-xs-12 a {
@@ -6785,6 +6919,9 @@ footer .date {
 .info div.col-xs-6 {
   padding: 40px 15px 40px 0px;
   border-right: 2px solid #e0e0e0; }
+
+.info div.col-xs-6 img {
+  max-width: 100%; }
 
 .info div.col-xs-6.i {
   padding: 40px 0px 40px 40px;
@@ -6867,60 +7004,17 @@ div.top {
   background-color: gray; }
 
 /* Carousel Styles */
-#carouselH img.abps {
+img.abps {
   border-radius: 10px;
   max-width: 600px;
   border: 1px solid #e0e0e0; }
-
-.carousel-indicators .active {
-  background-color: #2980b9; }
 
 .carousel-inner img {
   width: 100%;
   max-height: 360px; }
 
-.carousel-control {
-  width: 0; }
-
-.carousel-control.left,
-.carousel-control.right {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  background-image: none;
-  background-repeat: no-repeat;
-  text-shadow: none; }
-
-.carousel-control.left span {
-  padding: 15px; }
-
-.carousel-control.right span {
-  padding: 15px; }
-
-.carousel-control .fa-chevron-left,
-.carousel-control .fa-chevron-right,
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  position: absolute;
-  top: 45%;
-  z-index: 5;
-  display: inline-block; }
-
-.carousel-control .fa-chevron-left,
-.carousel-control .icon-prev {
-  left: 0; }
-
-.carousel-control .fa-chevron-right,
-.carousel-control .icon-next {
-  right: 0; }
-
-.carousel-control.left span,
-.carousel-control.right span {
-  background-color: #000; }
-
-.carousel-control.left span:hover,
-.carousel-control.right span:hover {
-  opacity: .7;
-  filter: alpha(opacity=70); }
+.no-p {
+  padding: 0px; }
 
 /* Carousel Header Styles */
 .header-text {
@@ -6933,7 +7027,7 @@ div.top {
 
 .header-text-2 {
   position: absolute;
-  top: 15%;
+  top: 71.75px;
   left: 1.8%;
   right: auto;
   width: 96.66666666666666%;
@@ -6943,6 +7037,7 @@ div.top {
   font-size: 40px; }
 
 .header-text h2 span {
+  border-radius: 2px;
   background-color: #375a9d;
   padding: 10px; }
 
@@ -6950,6 +7045,7 @@ div.top {
   font-size: 20px; }
 
 .header-text h3 span {
+  border-radius: 2px;
   background-color: #000;
   padding: 15px; }
 

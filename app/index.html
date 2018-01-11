@@ -49,7 +49,7 @@
 
               <img id="logo" src="images/GPD_logo.png">
 
-            <a class="navbar-brand">Gainesville Podiatry Associates</a>
+            <a ui-sref="home" class="navbar-brand">Gainesville Podiatry Associates</a>
           </div>
 
         </div>
@@ -59,15 +59,15 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="about">About Us</a></li>
-
-            <li><a ui-sref="services">Services</a></li>
             <li><a ui-sref="map">Directions</a></li>
+            <li><a ui-sref="services">Services</a></li>
             <li id="dropD"class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" ui-sref="forms">New Patient Forms</a></br>
-                  <a class="dropdown-item" ui-sref="forms">Release of Medical Records</a>
-                  <a class="dropdown-item" ui-sref="hippa">HIPPA Disclosure</a>
+                  <a class="dropdown-item" ui-sref="forms">Release of Medical Records</a></br>
+                  <a class="dropdown-item" ui-sref="hippa">HIPPA Disclosure</a></br>
+
                 </div>
             </li>
             <li><a ui-sref="contact">Contact</a></li>
@@ -80,11 +80,14 @@
   </div>
   </body>
   <footer>
-    <div class="text-center date">
+    <div class="text-center footWrap">
       <div class="col-xs-12 footTop">
         <div class="col-xs-2 text-left">
           <div class="">
             <a ui-sref="home">Home</a>
+          </div>
+          <div class="">
+            <a ui-sref="forms">Forms</a>
           </div>
           <div class="">
             <a ui-sref="contact">Contact</a>
@@ -93,9 +96,8 @@
             <a ui-sref="about">About Us</a>
           </div>
           <div class="">
-            <a ui-sref="forms">Forms</a>
+            <a ui-sref="doc">Doctors & Staff</a>
           </div>
-
           <div class="">
             <a ui-sref="services">Services</>
           </div>
@@ -105,7 +107,7 @@
           </div>
 
           <div class="">
-            <a ui-sref="hippa">HIPPA Disclosure</a>
+            <a ui-sref="forms">HIPPA Disclosure</a>
           </div>
         </div>
         <div class="col-xs-7 text-left">
@@ -115,7 +117,6 @@
             </div></br>
             <div class="abfas">
               <img src="images/abfas.png" alt="American Board of Foot and Ankle Surgery : A Credential You Can Trust">
-              <img class="right"src="images/APMALogo.png" alt="American Podiatric Medical Association">
             </div>
 
         </div>

@@ -2,7 +2,15 @@
   'use strict';
 
   angular
-    .module('GPA', ['ui.router']);
+    .module('GPA', ['ui.router'])
+    .run(function($rootScope) {
+
+  $rootScope.$on('$stateChangeSuccess', function() {
+   document.body.scrollTop = document.documentElement.scrollTop = 0;
+});
+
+});
+
 
     (function() {
       'use strict';
@@ -10,6 +18,7 @@
       angular
         .module('GPA')
         .config(routerConfig);
+
 
       function routerConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -48,6 +57,11 @@
           .state('related', {
             url: '/related',
             templateUrl: 'views/related.html'
+
+          })
+          .state('doc', {
+            url: '/docnstaff',
+            templateUrl: 'views/docnstaff.html'
 
           });
 
