@@ -10,87 +10,33 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/angular.min.js"></script>
     <script src="/js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/js/stateEvents.min.js"></script>
+    <script type="text/javascript" src="/js/resolveService.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <title>Gainesville Podiatry Associates</title>
 
 
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/index.css">
 
+
   </head>
 
   <body ng-app="GPA">
 
-    <div id="top" class="fixed_top info_top">
-      <div class="col-xs-12">
-        <span class="con"><i class="fa fa-phone"></i> &nbsp; 352-331-4333</span>
-        <span class="con"><i class="fa fa-fax"></i> &nbsp; 352-331-8382 (fax)</span>
-        <span><i class="fa fa-envelope"></i> &nbsp; GPA1986@aol.com</span>
-        <div class="col-xs-3 right">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search our site...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
-            </span>
-          </div>
-        </div>
-      </div>
 
-    </div>
-    <nav class="navbar navbar-default" role="navigation">
-      <div id="bar" class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div id="logo_wrapper" class="logo_wrapper" class="logo_wrapper">
-
-              <img id="logo" src="images/GPD_logo.png">
-
-            <a ui-sref="home" class="navbar-brand">Gainesville Podiatry Associates</a>
-          </div>
-
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a ui-sref="home">Home</a></li>
-            <li><a ui-sref="about">About Us</a></li>
-            <li><a ui-sref="map">Directions</a></li>
-            <li><a ui-sref="services">Services</a></li>
-            <li id="dropD"class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quick Links</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" ui-sref="forms">New Patient Forms</a></br>
-                  <a class="dropdown-item" ui-sref="forms">Release of Medical Records</a></br>
-                  <a class="dropdown-item" ui-sref="hippa">HIPPA Disclosure</a></br>
-
-                </div>
-            </li>
-            <li><a ui-sref="contact">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-  <div ui-view>
-
-  </div>
+  <div ui-view="top"></div>
+  <div ui-view="content"></div>
+  <div ui-view="foot"></div>
   </body>
+
   <footer>
     <div class="text-center footWrap">
-      <div class="col-xs-12 footTop">
-        <div class="col-xs-2 text-left">
+      <div class="row footTop">
+        <div id="foot_links" class="col-lg-2 col-md-2 col-sm-4 col-xs-4 text-left">
           <div class="">
             <a ui-sref="home">Home</a>
-          </div>
-          <div class="">
-            <a ui-sref="forms">Forms</a>
-          </div>
-          <div class="">
-            <a ui-sref="contact">Contact</a>
           </div>
           <div class="">
             <a ui-sref="about">About Us</a>
@@ -99,38 +45,39 @@
             <a ui-sref="doc">Doctors & Staff</a>
           </div>
           <div class="">
-            <a ui-sref="services">Services</>
+            <a ui-sref="forms">Forms & Info</a>
           </div>
-
+          <div class="">
+            <a ui-sref="products">Products</a>
+          </div>
           <div class="">
             <a ui-sref="related">Related Links</a>
           </div>
-
           <div class="">
-            <a ui-sref="forms">HIPPA Disclosure</a>
+            <a ui-sref="services">Services</>
+          </div>
+          <div class="">
+            <a ui-sref="contact">Contact</a>
           </div>
         </div>
-        <div class="col-xs-7 text-left">
+        <div id="foot_hours" class="col-lg-7 col-md-7 col-sm-4 col-xs-6 text-left">
             <div class="bold">Office Hours:</div>
             <div class="">
               M - F : 8:30 AM - 5:00 PM
             </div></br>
             <div class="abfas">
-              <img src="images/abfas.png" alt="American Board of Foot and Ankle Surgery : A Credential You Can Trust">
+              <img id="small" src="images/abfas_mobile.png" alt="American Board of Foot and Ankle Surgery">
+              <img id="big" src="images/abfas.png" alt="American Board of Foot and Ankle Surgery : A Credential You Can Trust">
             </div>
 
         </div>
-        <div class="col-xs-3 text-right add">
+        <div id="foot_dir" class="col-lg-3 col-md-3 col-sm-4 col-xs-4 text-right add">
 
-          <p><span class="fa fa-map-marker"></span> &nbsp;915 North West 56th Terrace</br>Gainesville, Florida 32605</p>
+          <p><span class="fa fa-map-marker"></span> &nbsp;915 North West 56th Terrace</br>Gainesville, Florida 32605 </br> <i class="fa fa-phone"></i> &nbsp; 352-331-4333</p>
           | <a ui-sref="map">Get Directions</a>
         </div>
       </div>
-      <div class="col-xs-12">
-        <div class="">
 
-        </div>
-      </div>
       <div class="footbar col-xs-12">
         &copy; <script>document.write(new Date().getFullYear())</script> Gainesville Podiatry Associates
       </div>

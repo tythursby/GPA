@@ -2,5 +2,18 @@
   <div class="main">
     <h2>Contact</h2>
   </div>
-
+  <h5 class="text-center" id="emergency">IF YOU ARE HAVING AN EMERGENCY CALL 911 FOR IMMEDIATE HELP</h5>
+  <form id="contact_form" action="/webformmailer.php" method="post">
+    <input type="hidden" name="subject" value="Submission" />
+    <input type="hidden" name="redirect" value="#!/thankyou.html" />
+    <h4>First Name</h4>  <input type="text" name="FirstName" placeholder="First"/>
+    <h4>Last Name</h4><input type="text" name="LastName" placeholder="Last"/>
+    <h4>Email</h4><input type="text" name="email" placeholder="yourEmail@example.com"/>
+    <h4>Comments</h4><textarea name="comments" cols="40" rows="10" placeholder="Type Comments Here"></textarea>
+    
+    <button class="btn btn-lg"type="submit" name="submit" value="submit">Submit</button>
+    <input type="hidden" name="form_order" value="alpha"/>
+    <input type="hidden" name="form_delivery" value="hourly_digest"/>
+    <input type="hidden" name="form_format" value="html"/>
+  </form>
 </div>

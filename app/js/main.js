@@ -3,13 +3,14 @@
 
   angular
     .module('GPA', ['ui.router'])
-    .run(function($rootScope) {
-
-  $rootScope.$on('$stateChangeSuccess', function() {
-   document.body.scrollTop = document.documentElement.scrollTop = 0;
-});
-
-});
+    .run(["$rootScope", "$anchorScroll",
+    function ($rootScope, $anchorScroll) {
+      $rootScope.$on("$locationChangeSuccess",
+        function() {
+          $anchorScroll();
+      });
+    }])
+  ;
 
 
     (function() {
@@ -23,46 +24,127 @@
       function routerConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
 
+        .state('app', {
+          abstract: true,
+          views: {
+            'content@': {
+              controller: 'appCtrl',
+              controllerAs: 'appC'
+            },
+            'top@': {
+              templateUrl: 'views/top.html'
+            }
+          }
+        })
+
           .state('home', {
+            parent:'app',
             url: '/',
-            templateUrl: 'views/home.html',
+            views:{
+              'content@': {
+                templateUrl: 'views/home.html',
+              }
+            }
+
 
 
           })
           .state('about', {
+            parent:'app',
             url: '/about',
-            templateUrl: 'views/about.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/about.html'
+              }
+            }
+
 
           })
           .state('services', {
+            parent:'app',
             url: '/services',
-            templateUrl: 'views/services.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/services.html'
+              }
+            }
+
 
           })
           .state('map', {
+            parent:'app',
             url: '/map',
-            templateUrl: 'views/map.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/map.html'
+              }
+            }
+
 
           })
           .state('forms', {
+            parent:'app',
             url: '/forms',
-            templateUrl: 'views/forms.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/forms.html'
+              }
+            }
+
 
           })
           .state('contact', {
+            parent:'app',
             url: '/contact',
-            templateUrl: 'views/contact.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/contact.html'
+              }
+            }
+
 
           })
           .state('related', {
+            parent:'app',
             url: '/related',
-            templateUrl: 'views/related.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/related.html'
+              }
+            }
+
 
           })
           .state('doc', {
+            parent:'app',
             url: '/docnstaff',
-            templateUrl: 'views/docnstaff.html'
+            views:{
+              'content@': {
+                templateUrl: 'views/docnstaff.html'
+              }
+            }
 
+
+          })
+          .state('products', {
+            parent:'app',
+            url: '/products',
+            views:{
+              'content@': {
+                templateUrl: 'views/products.html'
+              }
+            }
+
+
+          })
+          .state('thanks', {
+            parent:'app',
+            url: '/thankyou',
+            views: {
+              'content@':{
+                templateUrl: 'views/thankyou.html'
+              }
+            }
           });
 
         $urlRouterProvider.otherwise('/');
